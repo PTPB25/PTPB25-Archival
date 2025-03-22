@@ -1,0 +1,18 @@
+
+Diberikan dua bilangan bulat positif A dan B yang menyatakan panjang dua buah pita.
+
+Hitung nilai panjang pita maksimal N yang dapat diambil sehingga kedua pita tersebut dapat dibagi sama panjang menjadi N buah pita.
+
+A = 105, B = 70
+output:
+35
+
+
+A = 19, B = 2
+output:
+1
+
+
+A = 100, B = 35
+output:
+5

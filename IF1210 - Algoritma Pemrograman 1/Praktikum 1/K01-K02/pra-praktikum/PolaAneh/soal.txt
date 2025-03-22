@@ -1,0 +1,26 @@
+
+Diberikan sebuah bilangan positif ganjil N, buatlah sebuah matriks N x N yang memiliki pola seperti pada contoh.
+
+N = 1
+output:
+*
+
+
+N = 3
+output:
+.*.
+*.*
+.*.
+
+
+N = 9
+output:
+....*....
+...*.*...
+..*...*..
+.*.....*.
+*.......*
+.*.....*.
+..*...*..
+...*.*...
+....*....

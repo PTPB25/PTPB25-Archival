@@ -1,0 +1,41 @@
+----------------------------------------
+Selamat datang di Wahana Mandi Bola!
+
+Silakan beli tiket terlebih dahulu untuk masuk ke wahana ini.
+
+Harga tiket:
+- Anak-anak (usia 0-12 tahun): Rp 10000
+- Dewasa (usia 13-64 tahun): Rp 20000
+- Lansia (usia 65 tahun ke atas): Rp 15000
+
+Jumlah anak: 9
+Jumlah dewasa: 9
+Jumlah lansia: 9
+Tiket berhasil dibeli!
+Rincian:
+- Jumlah anak-anak: 9
+- Jumlah dewasa: 9
+- Jumlah lansia: 9
+- Total biaya: 405000
+----------------------------------------
+Selamat datang di Treasure Hunting Nimons!
+
+Jumlah pergerakan Nimons di dalam kolam: 3
+Jumlah lubang yang ada di kolam: 3
+Jumlah harta karun yang ada di kolam: 3
+Langkah ke-1
+Nimons bergerak sejauh 5 langkah
+Langkah ke-2
+Nimons bergerak sejauh 5 langkah
+Nimons menemukan harta karun!
+Langkah ke-3
+Nimons bergerak sejauh 5 langkah
+Nimons menemukan harta karun!
+Nimons menutup lubang!
+
+Total lubang yang ditutup: 1 dari 3 lubang
+Total harta karun yang ditemukan: 2
+Total harga harta karun yang ditemukan: 111110
+Total langkah yang ditempuh: 15
+Total biaya ganti rugi Pak Gro: 11111
+Total keuntungan Nimons dan Pak Gro: 99999

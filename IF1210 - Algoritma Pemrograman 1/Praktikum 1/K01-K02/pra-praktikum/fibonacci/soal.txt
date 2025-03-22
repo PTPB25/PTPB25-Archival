@@ -1,0 +1,21 @@
+
+Diberikan sebuah bilangan bulat non-negatif N, hitunglah  nilai bilangan fibonacci ke 0 hingga N
+
+Notes:
+fibonacci(0) = 1
+fibonacci(1) = 1
+fibonacci(n) = fibonacci(n-1) + fibonacci(n-2)   (untuk n >= 2) 
+
+- Berikan newline ('\n') pada akhir output
+
+
+N = 0
+output:
+1
+
+
+N = 4
+output:
+1 1 2 3 5
+
+
