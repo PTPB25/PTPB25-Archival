@@ -52,7 +52,7 @@ void solution(){
     strcpy(content_type, "N/A");
     while(fgets(line, MAX_LINE, in)){
         if(line[0] == '\n')break;
-        if(strlen(line) > 1 && line[0] == '\r' && line[1] == '\n')break;
+        if(strlen(line) > 1 && line[0] == '\r' && line[1] == '\n')break; /* Asprak crime part 1: using CRLF line terminator in the input file */
 
         i = 0; j = 0;
         while(line[i] != ':'){
