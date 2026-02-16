@@ -4,3 +4,5 @@ Tugas besar II1200 2025 - Pengantar Sistem dan Teknologi Informasi adalah tentan
 
 * [Kelompok 13](https://drive.google.com/drive/folders/1AZswYak74bFua42dKWVnL6vi8H-YcJO9?usp=sharing).
 * [Kelompok 7](https://drive.google.com/drive/folders/11L07sWGa-LaqF08NKXS5i-wwACFwcIKZ?usp=sharing).
+* [Kelompok 17](https://drive.google.com/drive/folders/1i06IKXqmjLSdcpwvRUcQudxfKIdiwS-t?usp=sharing).
+
