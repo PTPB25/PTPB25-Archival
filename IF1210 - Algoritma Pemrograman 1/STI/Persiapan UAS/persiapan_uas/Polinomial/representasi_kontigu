@@ -1,0 +1,117 @@
+Umumnya, pemrosesan sekuensial pada polinom bisa menggunakan mark ataupun tidak.
+
+Kalau menggunakan MARK, maka ada pasangan <degree, koef> yang bentuknya seperti <-9999,0>
+
+//misal, kita mau ngisi polinomial
+
+type ElType < degree: integer, coefficient: integer >
+constant MARK : ElType = <-9999,0>
+
+input(deg, coef)
+while(deg!=MARK.deg) and (coef!=MARK.coef)
+	//pemrosesan
+
+
+Kalau tidak menggunakan MARK, kita cukup memeriksa apaakah koefisiennya 0 atau tidak
+
+
+
+
+
+
+
+//REPRESENTASI DENGAN STRUKTUR LIST STATIK KONTIGU
+
+
+constant nMax : integer = 100
+type Polinom : < degree : integer, arrSuku : array[0..nMax] of integer >
+
+
+procedure createPolinom(output p: Polinom)
+{ Membentuk polinom kosong }
+
+Kamus Lokal
+Algoritma
+    p.degree <- -9999 //ARTINYA BELUM ADA ARRAY YANG TERISI
+
+procedure displayPol(input p: Polinom)
+{ Menuliskan polinom p }
+
+Kamus Lokal
+    i : integer
+
+Algoritma
+
+	//degree/derajaatnya itu kayak implicitly dinyatakan dengan indeks di arraynya
+    i transversal [p.degree ... 0] //akses dari belakang
+        if p.arrSuku[i] ≠ 0 then
+			if i==degree then
+				output(p.arrSuku[i], "x^", i) //9x^2
+			else
+				if(p.arrSuku[i]>0) then
+					output("+", p.arrSuku[i], "x^", i)
+				else if(p.arrSuku[i]>0) then
+					output("-", p.arrSuku[i], "x^", i)
+			
+
+procedure addPol(input p1, p2: Polinom, output p3: Polinom)
+/*{ Menjumlahkan dua polinom }*/
+
+Kamus Lokal
+    i, maxDeg : integer
+
+Algoritma
+    maxDeg <- max(p1.degree, p2.degree) //mana yang lebih tinggi degree, dan ini sebenarnya tuh fungsi max
+
+    p3.degree <- maxDeg
+
+    i transversal[maxDeg ... 0] //dari elemen paling belakang sampai ke idx-0, ambil koefisiennya
+        p3.arrSuku[i] <- p1.arrSuku[i] + p2.arrSuku[i]
+
+    adjustDegree(p3) //bisa aja, setelah ditambah2in, elemen di x derajat tertingginya nol, 
+
+procedure subPol(input p1, p2: Polinom, output p3: Polinom)
+/*Mengurangkan dua polinom*/
+
+Kamus Lokal
+    i, maxDeg : integer
+
+Algoritma
+    maxDeg <- max(p1.degree, p2.degree)
+    p3.degree <- maxDeg
+    i transversal [0 ... maxDegree]
+        p3.arrSuku[i] <- p1.arrSuku[i] - p2.arrSuku[i]
+    adjustDegree(p3)
+
+
+procedure derivPol(input p: Polinom, output p1: Polinom)
+{ Membuat turunan dari p }
+
+Kamus Lokal
+    i : integer
+
+Algoritma
+    if p.degree = 0 then //di polinomial cuman ada konstanta
+        p1.degree <- 0
+        p1.arrSuku[0] <- 0 //jadi 0
+    else
+        p1.degree <- p.degree - 1 //derajat berkurang 1
+        i transversal [1 ... p.degree] 
+            p1.arrSuku[i - 1] <- i * p.arrSuku[i] //eksponennya dikali dengan koefisien, terus digeeser ke kiri
+		//tidak tinjau derajat pangkat x masing2, karena secara gak langsung sudah berpindah ke kiri
+
+
+procedure adjustDegree(input/output p: Polinom)
+/*{ Menyesuaikan degree jika koefisien tertinggi 0 }*/
+
+Kamus Lokal
+    i : integer
+
+Algoritma
+    i <- p.degree
+    while (i ≥ 0) and (p.arrSuku[i] = 0) do //memeriksanya dari belakang
+        i <- i - 1
+    if i < 0 then
+        p.degree <- -999 /* polinom kosong, tidak ada polinom yang exist*/
+    else
+        p.degree <- i

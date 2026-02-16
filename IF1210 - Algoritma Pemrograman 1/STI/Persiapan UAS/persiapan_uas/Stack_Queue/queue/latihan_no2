@@ -1,0 +1,26 @@
+constant CAPACITY : integer = 100
+constant IDX_UNDEF : integer = -1
+
+type ElType : < id : integer, cost : integer>
+type Queue : < buffer : array[0 ...CAPACITY-1]of ElType, idxHead : integer, count : integer>
+
+
+procedure roundRobin (input/output q: Queue, input t: integer)
+
+/*{Proses: memproses elemen antrian q secara round robin}
+I.S.: q tidak kosong, t adalah waktu yang tersedia untuk memproses
+setiap elemen}
+F.S.: elemen e pada posisi HEAD dihapus dari q.
+Jika cost e ≤ t maka ditampilkan “<id> telah selesai diproses”
+Jika cost e > t maka e disisipkan kembali sebagai tail q
+dengan cost berkurang sebesar t */
+
+Kamus Lokal
+	temp : ElType
+Algoritma
+	dequeue(q, temp)
+	if(temp.cost>t) then
+		temp.cost<-temp.cost-t
+		enqueue(q, temp)
+	else
+		output("Id telah selesai diproses")

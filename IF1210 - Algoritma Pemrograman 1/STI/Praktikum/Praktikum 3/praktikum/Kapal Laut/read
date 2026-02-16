@@ -1,0 +1,3 @@
+Kalau mau coba compile di device sendiri, jangan lupa
+gcc -o (nama) NimonsAttack.c driver.c -lm
+di terminal folder

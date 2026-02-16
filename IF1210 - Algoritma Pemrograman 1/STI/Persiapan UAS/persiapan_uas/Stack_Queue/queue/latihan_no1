@@ -1,0 +1,40 @@
+/* Circular Buffer*/
+
+constant CAPACITY : integer = 100
+constant IDX_UNDEF : integer = -1
+
+type ElType : < id : integer, cost : integer>
+type Queue : < buffer : array[0 ...CAPACITY-1]of ElType, idxHead : integer, count : integer>
+
+idxTail <- (idxHead + count-1) mod CAPACITY //kadang ini tuh bisa melewati kapasitas
+
+function isFull(q : Queue) --> boolean
+Kamus Lokal
+Algoritma
+	--> count = CAPACITY
+
+procedure enqueue(input/output q : Queue, input x : ElType)
+Kamus Lokal
+	idxTail : integer
+Algoritma
+	idxTail <- (q.idxHead+q.count-1) mod CAPACITY //penerapan dari queue tapi pakai circular buffer
+	q.buffer[idxTail].id <- x.id
+	q.buffer[idxTail].cost <- x.cost
+	q.count<-q.count+1
+
+procedure dequeue(input/output q : Queue, output x : ElType)
+Kamus Lokal
+Algoritma
+	x <- q.buffer[q.idxHead]
+	q.count<-q.count-1
+	if(q.count=0) then
+		q.idxHead=IDX_UNDEF
+	else
+		q.idxHead <- (q.idxHead+1) mod CAPACITY
+	
+
+
+	
+	
+		
+

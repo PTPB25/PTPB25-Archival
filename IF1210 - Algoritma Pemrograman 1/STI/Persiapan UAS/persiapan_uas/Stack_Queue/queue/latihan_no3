@@ -1,0 +1,75 @@
+constant CAPACITY : integer = 100
+constant IDX_UNDEF : integer = -1
+
+type ElType : < id : integer, cost : integer> //elemen barisannya buakn integer, tapi pasangan id pekerjaan dan cost (waktu)
+type Queue : < buffer : array[0 ...CAPACITY-1]of ElType, idxHead : integer, idxTail : integer>
+
+procedure enqueue (input/output q: Queue, input val: ElType)
+
+/*{Proses: menambahkan val sebagai elemen baru di q, dengan
+memperhatikan lamanya waktu pekerjaan tsb dapat
+diselesaikan, yaitu pekerjaan yang lebih cost diletakkan
+lebih akhir. Jika ada 2 pekerjaan yang cost waktunya sama,
+pekerjaan terakhir yang baru datang disisipkan lebih
+belakang}
+{I.S.: q mungkin kosong, q tidak penuh}
+{F.S.: val menjadi elemen q yang baru dengan urutan waktu pekerjaan
+membesar}*/
+
+Kamus Lokal
+	found : boolean
+	i, j : integer
+
+Algoritma
+	if isEmpty(q) then
+		q.idxHead<-0
+		q.idxTail<-0
+		q.buffer[q.idxHead]=val;
+	else //tapi kalau misal gak kosong
+		if(q.idxTail=CAPACITY-1) then //apakah idxTailnya paling mentok ke kanan
+			i transversal[q.idxHead...q.idxTail]
+				q.buffer[i-idxHead] <- q.buffer[i] //Misal, indeks ke "idxHead" kalau dikurangi "idxHead" hasilnya 0, ini sama saja pergeseran ke kiir
+			
+			
+			q.idxHead<-0
+			q.idxTail<-q.idxTail-q.idxHead
+		
+		j <- q.idxHead
+		found <- false //parameter supaya loop berhenti dan ketemu posisi yang cocok
+		while(j<=q.idxTail) or not(found) do 
+		
+		//priority queue itu mengurut memebesar, dari terkecil ke terbesar
+	
+			if(q.buffer[j].cost>val.cost) then
+				found<-true 
+			else //masih belum ketemu posisi yang cocok
+				j<-j+1
+		
+		//pergeseran ke kanan
+		idxTail<-idxTail+1
+		if not(found) then
+			q.buffer[q.idxTail]=val //skemanya enqueue biasa kalau dia least prioritized
+		else
+			i transversal[q.idxTail...j+1] 
+				q.buffer[i]<-q.buffer[i-1] //geser ke kanan
+			q.buffer[j]<-val //skemanya kayak penyisipan di array statik biasa
+		
+
+//PRIORITY QUEUE ITU SIFATNYA SEPERTI QUEUE, KALAU MISAL DIA LEAST PRIORITIZED
+//TAPI KALAU MISALNYA DI SOALNYA VALUE YANG DIBANDINGKAN, KITA HARUS CARI POSIIS YANG SESUAI DI QUEUENYA, LALU SISIPKAN, JANGAN LUPA GESER
+
+
+procedure dequeue (input/output q: Queue, output val: ElType)
+{Proses: menyimpan IDX_UNDEFa head q pada val dan menghapus head dari q}
+{I.S.: q tidak kosong}
+{F.S.: elemen pada HEAD dihapus, dan disimpan nilainya pada val}
+
+Kamus Lokal
+	length : integer
+Algoritma
+	val <- q.buffer[q.idxHead]
+	if(q.idxHead=q.idxTail) then
+		q.idxHead<-IDX_UNDEF
+		q.idxTail<-IDX_UNDEF
+	else
+		q.idxHead<-q.idxHead+1

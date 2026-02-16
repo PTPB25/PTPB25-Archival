@@ -1,0 +1,31 @@
+for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            // Skip if comparing the same time
+            if (i == j) continue;
+            
+            int time_i_minutes = data[i].HH * 60 + data[i].MM;
+            int time_j_minutes = data[j].HH * 60 + data[j].MM;
+            int time_diff = abs(time_i_minutes - time_j_minutes);
+            
+            // Check if it's a palindrome and not zero
+            if (dromeCheck(time_diff)) {
+                // Determine which time comes first
+                char *earlier, *later;
+                if (time_i_minutes < time_j_minutes) {
+                    earlier = data[i].input;
+                    later = data[j].input;
+                } else {
+                    earlier = data[j].input;
+                    later = data[i].input;
+                }
+                
+                // Check if this pair already exists
+                if (!pairExists(times, index, earlier, later, time_diff)) {
+                    strcpy(times[index].awal, earlier);
+                    strcpy(times[index].akhir, later);
+                    times[index].menit = time_diff;
+                    index++;
+                }
+            }
+        }
+    }

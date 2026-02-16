@@ -1,0 +1,65 @@
+KAMUS UMUM
+	constant IDX_UNDEF: integer = -1
+	constant CAPACITY: integer = 10
+	type ElType: integer
+
+	type Stack: < buffer: array [0..CAPACITY-1] of ElType, { penyimpanan elemen }
+	idxTop: integer >
+
+
+procedure copyStack(input sIn: Stack, output sOut: Stack)
+/*{ Membuat salinan sOut }
+{ I.S. sIn terdefinisi, sOut sembarang }
+{ F.S. sOut berisi salinan sIn yang identik }*/
+Kamus Lokal
+	sTemp : Stack
+	val : ElType
+Algoritma
+	createStack(sTemp) //buat stack temporary
+
+	repeat
+		pop(sIin, val) //mindah-mindahin
+		push(sTemp, val)
+	until(isEmptyStack(sIn)) //sampai kosong stack asal/originalnya
+	repeat //apa yang udah kupindah-pindahin, kupindahin lagi ke sOut
+		pop(sTemp, val)
+		push(sOut, val)
+	until(isEmptyStack(sTemp))
+		
+
+procedure inverseStack(input/output s: Stack)
+Kamus Lokal
+	stemp : Stack
+	val : ElType
+Algoritma
+	while not(isEmpty(s)) do //stacknya kosong atau nggak
+		pop(s, val) //keluarin elemen top
+		push(stemp, val) //masukin elemenya ke stemp
+
+	copyStack(stemp, s)
+/*{ Membalik isi suatu stack }
+{ I.S. s terdefinisi }
+{ F.S. Isi s terbalik dari posisi semula }*/
+
+
+function mergeStack(s1,s2: Stack) → Stack
+/*{ Menghasilkan sebuah stack yang merupakan hasil penggabungan s1
+dengan s2 dengan s1 berada di posisi lebih “bawah”
+. Urutan kedua
+stack harus sama seperti aslinya. }
+{ Stack baru diisi sampai seluruh elemen s1 dan s2 masuk ke dalam
+stack, atau jika stack baru sudah penuh, maka elemen yang
+dimasukkan adalah secukupnya yang dapat ditampung. }*/
+Kamus Lokal
+	stemp : stack
+	val : ElType //variabel di mana elemen yang dipop disimpan sementara
+Algoritma
+
+	copyStack(s1, stemp) //salin isi stack s1 ke stemp
+
+	inverseStack(s2)
+	while not(isEmptyStack(s2)) and not(isFull(stemp)) do
+		pop(s2, val)
+		push(stemp1, val)
+	
+		

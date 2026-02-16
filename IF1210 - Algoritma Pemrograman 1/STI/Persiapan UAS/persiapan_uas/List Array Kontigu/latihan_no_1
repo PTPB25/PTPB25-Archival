@@ -1,0 +1,38 @@
+Q : Apakah perlu perubahan definisi tipe bentukan List dari alt-1a ke alt-1b dan dari alt-2a ke alt-2b? Jika ya, tuliskan perubahannya.
+A : ...
+
+Kalau untuk alt-1a ke alt-1b, tidak perlu ada perubahan. Kenapa?
+
+constant CAPACITY : integer = 100
+constant IDX_UNDEF : integer = -1
+constant MARK : integer = -9999
+
+type ElType : integer
+type List : < contents : array[0...CAPACITY-1] of ElType>
+
+Kuncinya adalah mark. Selagi masih menemukan mark, fungsi/procedurenya tidak berjalan.
+
+Lalu, kalau untuk alt-2a ke alt-2b, apakah perlu ada perubahan? Ya //pakai n efektif, itu perlu ada perubahan struktur data
+
+Kita butuh tambahan info tentang indeks elemen pertama yang efektif.
+
+constant CAPACITY : integer = 100
+constant IDX_UNDEF : integer = -1
+
+//bentuk datanya bisa dua
+type ElType : integer
+type List : <contents : array[0...CAPACITY-1] of ElType, Neff : integer, firstEffIdx : integer>
+
+atau juga boleh...
+type List : <contents : array[0...CAPACITY-1] of ElType, firstEffIdx : integer, lastEffIdx : integer>
+
+jadi kalau misal kita mau implementasi fungsi length
+
+function length(l : list) --> integer
+Kmaus Lokal
+Algoritma
+	--> l.Neff
+
+atau 
+	--> l.lastEffIdx-l.firstEffIdx+1
+

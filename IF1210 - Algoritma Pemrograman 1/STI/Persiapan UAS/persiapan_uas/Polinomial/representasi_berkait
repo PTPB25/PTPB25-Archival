@@ -1,0 +1,210 @@
+type Address: pointer to Suku
+type Suku: < degree: integer, coef: integer, next: Address >
+type Polinom: Address
+constant NIL: Address = ... /*bisa diisi apa aja*/
+
+procedure createPolinom(output p: Polinom)
+{ Membuat list kosong }
+
+Algoritma
+    p <- NIL
+
+proecedure displayPol(input p : Polinom)
+
+Kamus Lokal
+	pt : Address
+	copy : Address
+Algoritma
+	pt <- p 
+	copy <- NIL //buat dua pointer, satu pointer copy, satu pointer pt
+
+	while(pt) do
+		if(copy!=NIL) then //sekarang node yang ditinjau bukan "NODE AWAL"
+			if(pt.coef>0) then
+				output("+", pt.coef, "x^", pt.degree)
+			else
+				output("-", pt.coef, "x^", pt.degree)
+		else //aku lagi akses node awal
+			if(pt.coef!=0) then
+				output(pt.coef, "x^", pt.degree)
+		pt<-pt.next
+
+
+procedure addPol(input p1, p2: Polinom, output p3: Polinom)
+
+Kamus Lokal
+    pt1, pt2, pt3, last: Address
+    sumCoef : integer
+
+Algoritma
+
+    createPolinom(p3)
+    last <- NIL //ini gunanya apa? nanti kujelasin, ADDRESS LAST INI AKAN BERGANTI GANTI SEIRING WAKTU
+
+    pt1 <- p1 //ini ada dua pointer, satu pointer ke poly 1, satu pointernya lagi ke poly 2
+    pt2 <- p2
+
+    while (pt1) or (pt2) do
+
+		//ASUMSINYA P1 DAN P2 GAK ADA KOEFISIEN 0
+
+        if (pt1 ≠ NIL) and ((pt2 = NIL) or (pt1.degree > pt2.degree)) then // PERTAMA, KALAU derajat SUKU YANG DITUNJUK GAK SAM
+            pt3 <- newSuku(pt1.degree, pt1.coef) //inisiasi/construct node "suku" yang baru
+            insertLast(pt3, p3, last) //dimasukkan ke polinom yang baru
+
+			//apa yang terkandung dalam pt3, entah itu info degree atau coef akan ditambahkan ke POLYNOMIAL KE-3
+			//SYARATNYA, AKU HARUS TAU ALAMAT lastnya
+
+            pt1 <- pt1.next //karena cuman pt1.degree dan pt1. coeff yan diproses, yang pt 2
+
+        else if (pt2 ≠ NIL) and ((pt1 = NIL) or (pt1.degree < pt2.degree)) then //kebalikannya
+            pt3 <- newSuku(pt2.degree, pt2.coef)
+            insertLast(pt3, p3, last)
+            pt2 <- pt2.next
+
+		
+        else //TAPI KALAU MISAL DERAJATNYA SAMA
+
+            sumCoef <- pt1.coef + pt2.coef
+            if sumCoef ≠ 0 then
+                pt3 <- newSuku(pt1.degree, sumCoef)
+                insertLast(pt3, p3, last)
+            pt1 <- pt1.next
+            pt2 <- pt2.next
+
+
+procedure subPol(input p1, p2: Polinom, output p3: Polinom)
+
+Kamus Lokal
+    pt1, pt2, pt3, last: Address
+    diffCoef : integer
+
+Algoritma
+    createPolinom(p3)
+    last <- NIL
+    pt1 <- p1
+    pt2 <- p2
+    while (pt1 ≠ NIL) or (pt2 ≠ NIL) do
+        if (pt1 ≠ NIL) and ((pt2 = NIL) or (pt1.degree > pt2.degree)) then
+            pt3 <- newSuku(pt1.degree, pt1.coef)
+            insertLast(pt3, p3, last)
+            pt1 <- pt1.next
+        else if (pt2 ≠ NIL) and ((pt1 = NIL) or (pt1.degree < pt2.degree)) then
+            pt3 <- newSuku(pt2.degree, -pt2.coef)
+            insertLast(pt3, p3, last)
+            pt2 <- pt2.next
+        else
+            diffCoef <- pt1.coef - pt2.coef
+            if diffCoef ≠ 0 then
+                pt3 <- newSuku(pt1.degree, diffCoef)
+                insertLast(pt3, p3, last)
+            pt1 <- pt1.next
+            pt2 <- pt2.next
+
+
+procedure derivPol(input p: Polinom, output p1: Polinom)
+
+Kamus Lokal
+    pt, ptNew, last : Address
+
+Algoritma
+    createPolinom(p1)
+
+    last <- NIL
+    pt <- p
+
+    while pt ≠ NIL do
+        if pt.degree > 0 then
+            ptNew <- newSuku(pt.degree - 1, pt.degree * pt.coef) //pointer ptNew reference to newSuku
+            insertLast(ptNew, p1, last)
+        	pt <- pt.next
+		else if pt.degree = 0 then
+			ptNew <- newSuku(0, 0)
+			insertLast(ptNew, p1, last)
+	p1.degree<-p.degree-1
+	
+
+	
+procedure insertLast(input ptNew: Address, input/output p: Polinom, input/output last: Address)
+/*{ Proses: Menyisipkan elemen ptNew sebagai elemen terakhir dari list p }
+  { I.S. p mungkin kosong atau tidak kosong, ptNew sudah dialokasi dan berisi data suku }
+  { F.S. ptNew menjadi elemen terakhir dari p, last menunjuk ke elemen terakhir baru } */
+
+Algoritma
+    if p = NIL then //kalau polinomnya kosong, maka alamat headnya adalah alamat pointer yang sebelumnya sudah diproses
+        p <- ptNew
+    else
+        last.next <- ptNew //kebalikannya, kalau polinomnya udah ada isi, ditambahkan sebagai next dari elemen terakhir
+
+		"next dari Address LAST itu ptNEW"
+
+		last <- ptNew
+		last.next <- NIL //SEKARANG last yang sekarang, yang adalah alamat ptNew, nextnya jadi NIL
+
+
+
+function newSuku(input deg: integer, input coef: integer) → Address
+/* { Proses: Mengalokasikan node baru dengan degree dan coefficient yang diberikan }
+   { F.S.: Mengembalikan address node baru dengan data tersebut dan next = NIL } */
+
+Kamus Lokal
+    pt: Address
+
+Algoritma
+    pt ← AlokasiSuku() //biasanya yang bentuknya malloc(sizeof(Node)) misalkan
+    if pt ≠ NIL then
+        pt.degree ← deg
+        pt.coef ← coef
+        pt.next ← NIL
+    return pt
+
+
+
+procedure adjustDegree(input/output p: Polinom)
+/*{ Menyesuaikan degree jika koefisien tertinggi 0 }*/
+
+Kamus Lokal
+    i : integer
+
+Algoritma
+    i <- p.degree
+    while (i ≥ 0) and (p.arrSuku[i] = 0) do //memeriksanya dari belakang
+        i <- i - 1
+    if i < 0 then
+        p.degree <- -999 /* polinom kosong, tidak ada polinom yang exist*/
+    else
+        p.degree <- i
+
+
+procedure populatePol(input/output p : Polinom)
+
+Kamus Lokal
+	pt : Address
+	prev, curr : Address
+
+Algoritma
+	createPolinom(p)
+	input((deg, coef))
+	while(deg!=-9999)
+		pt<-newSuku(deg, coef)
+		if(pt!=NIL) then
+			if p.degree<degthen
+				pt.next <- p 
+				p <- pt
+			else
+				prev <- NIL
+				curr <- p 
+				while(curr) and (curr.degree>deg) do
+					prev<-curr
+					curr<-curr.next
+				pt.next<-cur
+
+				if(curr.degree=deg) then
+					curr.coef<-curr.coef+coef
+				else
+					if(prev=NIL) then
+						p<-pt
+					else
+						prev.next<pt
+		input((deg, coef))
+						

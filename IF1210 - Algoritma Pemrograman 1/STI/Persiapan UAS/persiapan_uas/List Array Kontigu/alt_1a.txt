@@ -1,0 +1,83 @@
+constant CAPACITY : integer = 100
+constant IDX_UNDEF : integer = -1
+constant MARK : integer = -9999
+
+type ElType : integer
+type List : < contents : array[0...CAPACITY-1] of ElType>
+//kenapa satu 1a? karena pakai mark
+
+l : List
+
+procedure CreateList(input/output l : List)
+{F.S. : terbentuk list kosong}
+
+Kamus Lokal
+    i : integer
+Algoritma //alt 1a itu rata kiri dan kontinu
+    i transversal[0...CAPACITY-1]
+        l.contents[i]<--MARK; 
+
+
+function isEmpty(l: List) → boolean
+Kamus Lokal
+Algoritma
+    --> l.contents[0] = MARK //udah pasti empty
+
+function length(l: List) → integer
+Kamus Lokal
+    i : integer
+Algoritma
+    if(isEmpty(l)) then
+        --> 0
+    else
+        i<-0
+        while (i < CAPACITY) and l.contents[i] ≠ MARK do
+            i ← i + 1 //increment
+        --> i
+
+
+function getElmt(l: List, i: integer) → ElType
+Kamus Lokal
+Algoritma
+    --> l.contents[i]
+
+
+procedure setElmt(input/output l: List, input i: integer, input v: ElType)
+Kamus Lokal
+Algoritma
+    l.contents[i] <-- v
+
+
+function indexOf(l: List, x: ElType) → integer //nyari apakah elemenn yang dimaksud itu ada di arraynya, terus balikin indeksnya
+Kamus Lokal
+    i : integer
+Algoritma
+    i transversal [0 ...length(l)-1]
+        if l.contents[i] = x then
+            --> i
+    ---> IDX_UNDEF
+
+procedure insertFirst(input/output l: List, input x: ElType) //karena ini butuh pergeseran
+Kamus Lokal
+     i : integer
+Algoritma
+    if length(l) < CAPACITY then
+        i transversal [length(l) ...1] //ini secara tersirat elemennya bergeser ke kanan semua
+            l.contents[i] <-- l.contents[i-1]
+        l.contents[0] ← x
+
+procedure insertLast(input/output l: List, input x: ElType)
+Kamus Lokal
+Algoritma
+    if length(l) < CAPACITY then
+        l.contents[length(l)] ← x
+
+procedure insertAt(input/output l: List, input x: ElType, input idx: integer)
+Kamus Lokal
+Algoritma
+    if length(l) < CAPACITY and idx ≥ 0 and idx ≤ length(l) then
+        i transversal [length(l)...idx+1]
+            l.contents[i]<--l.contents[i-1]
+        l.contents[idx] ← x
+
+

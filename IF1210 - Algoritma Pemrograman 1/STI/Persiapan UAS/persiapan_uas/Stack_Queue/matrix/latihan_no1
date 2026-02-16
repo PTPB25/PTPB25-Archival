@@ -1,0 +1,79 @@
+constant ROW_CAP : integer = 100
+constant COL_CAP : integer = 100
+
+type ElType : integer
+type Matrix : <buffer : array[0 ...ROW_CAP-1] of array[0 ... COL_CAP-1] of ElType, COL_EFF : integer, ROW_EFF : integer>
+
+
+procedure readMatrix (output m: Matrix)
+/*{ I.S. sembarang }
+{ F.S. Ukuran efektif dan semua elemen m terdefinisi }
+{ Proses: Membaca masukan ukuran baris dan kolom efektif
+dari keyboard dan melakukan CreateMatrix dan
+mengisi nilai efektifnya.
+Mengisi elemen m dengan pembacaan dari keyboard secara
+secara traversal per baris. }*/
+
+Kamus Lokal
+	row, column : integer
+	i, j : integer
+Algoritma
+	repeat
+		input(row, column)
+	until(row>=1 && row<=ROW_CAP && col>=1 && col<=COL_CAP)
+
+	i transversal[0 ... row-1]
+		j transversal[0 ... col-1]
+			input(el)
+			m[i][j] = el
+
+
+function isMatrixEqual(m1,m2: Matrix) → boolean
+/*{ Mengirimkan true jika m1 = m2, yaitu ukuran efektif m1 dan m2 sama dan
+untuk setiap i,j yang merupakan indeks baris dan kolom, m1[i,j]=m2[i,j] }*/
+
+Kamus Lokal
+	equal : boolean
+Algoritma
+	equal<-false
+	if(m1.ROW_EFF!=m2.ROW_EFF) and (m1.COL_EFF!=m2.COL_EFF) then
+		-> equal
+	i transversal[0 ... m1.ROW_EFF-1]
+		j transversal[0 ... m1.COL_EFF-1]
+			if(m1[i][j]!=m2[i][j]) then
+				-> equal
+	equal<-true
+	-> equal
+
+
+function isSparse (m: Matrix) → boolean
+/*{ Mengirimkan true jika m adalah matriks sparse: matriks “jarang” dengan
+definisi: hanya maksimal 5% dari memori matriks yang efektif bukan
+bernilai 0 }*/
+
+Kamus Lokal
+Algoritma
+	return m.COL_EFF*m.ROW_EFF/(ROW_CAP*COL_CAP)*100<=5
+
+function transpose (m: Matrix) → Matrix
+{ Menghasilkan transpose dari m yaitu setiap elemen m[i,j] ditukar
+nilainya dengan elemen m[j,i] }
+
+Kamus Lokal
+	mtemp : Matrix
+Algoritma
+	i transversal [0 ... m.ROW_EFF]
+		j transversal [0 ... m.COL_EFF]
+			mtemp[j][i] <- m[i][j]
+
+
+Q : • Jika definisi ADT Matriks diubah: bahwa matriks selalu dimulai dari “ujung kiri atas” dihapus, tetapi dapat dimulai dari sel mana pun.
+	• Perubahan apa yang harus dilakukan pada definisi struktur data ADT Matriks?
+
+A : Kita harus tambahkan firstRowEff dan firstColEff
+
+type Matrix : <buffer : array[0 ...ROW_CAP-1] of array[0 ... COL_CAP-1] of ElType,
+			firstColEff : integer, 
+			firstRowEff : integer
+			COL_EFF : integer, 
+			ROW_EFF : integer>

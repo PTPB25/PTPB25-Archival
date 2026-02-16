@@ -1,0 +1,163 @@
+Untuk alt-1b.. /* pakai mark kontinu, dan tidak rata kiri*/
+
+Kamus Global
+	constant CAPACITY : integer = 100
+	constant IDX_UNDEF : integer = -1
+	constant MARK : integer = -9999
+
+	type ElType : integer
+	type List : < contents : array[0...CAPACITY-1] of ElType>
+
+Untuk alt-2b...
+
+Kamus Global
+	constant CAPACITY : integer = 100
+	constant IDX_UNDEF : integer = -1
+	constant MARK : integer = -9999
+
+	type ElType : integer
+	type List : < contents : array[0...CAPACITY-1] of ElType, firstEffIdx : integer, lastEffIdx : integer
+
+
+///////////////////////////////
+Implementasi untuk alt-1b
+
+function length (l : list) → integer
+{Mencari panjang list}
+
+Kamus Lokal
+	i : integer
+	count : integer
+
+Algoritma
+	if(isEmpty(l))
+		-> 0
+	else
+		i<-0, count<-0
+		while(l.content[i]=MARK) do
+			i<-i+1 /* iterasi terus*/
+
+		while(l.content[i]!=MARK) do
+			i<-i+1 //iterasi lagi
+			count<-count+1
+		-> count
+
+procedure insertAt(input/output l : list, input x : ElType, input idx : integer) //perlu ditinjau lagi
+{I.S. : list terdefinisi, mungkin kosong, idx adalah indeks yang valid dalam list}
+{F.S. : elemen telah disisipkan ke dalam list pada indeks ke-x}
+
+Kamus Lokal
+	count, i : integer
+
+Algoritma {untuk alt-1b}
+	if(length(l)<CAPACITY) then
+		if (lastIdx(l)<CAPACITY-1) then //kita anggap fungsi lastIdx sudah diimplementasi
+			j<-0
+			i transversal [firstIdx(l)...lastIdx(l)] //pergeseran supaya rata kek kiri
+				l.contents[j]=l.contents[i]
+				l.content[i]=MARK
+				j<-j+1
+			i transversal[length(l)...idx+1]
+				l.content[i]=l.content[i-1]
+			l.content[idx]=x
+	
+function indexOf(l : list, x : integer) → integer
+
+Kamus Lokal
+	i,j : integer
+
+Algoritma {untuk alt-1b}
+	if(isEmpty) then
+		-> IDX_UNDEF
+	else
+		i<-firstIdx(l)
+		j<-lastIdx(l)
+		while(i<=j)do
+			if(l.contents[i]=x) then
+				--> i
+			else
+				i<-i+1
+		--> IDX_UNDEF
+
+
+function concat(l1,l2 : list) → list
+Kamus Lokal
+	lakhir : list
+	i,j,k : integer
+
+Algoritma {untuk alt-1b}
+	i←0
+	j transversal [firstIdx(l1)..lastIdx(l1)] //akses elemen list 1
+		lakhir.contents[i]<-l1.contents[j]
+		i<-i+1
+	k transversal [firstIdx(l2)..lastIdx(l2)] //akses elemen list 2
+		lakhir.contents[i]<-l2.contents[k]
+		i<-i+1
+	→ lakhir
+
+
+Implementasi untuk alt-2b
+
+function length (l : list) → integer
+{Mencari panjang list}
+
+Kamus Lokal
+Algoritma
+	--> l.lastEffIdx-l.firstEffIdx+1
+
+
+procedure insertAt(input/output l : list, input x : ElType, input idx : integer) //perlu ditinjau lagi
+{I.S. : list terdefinisi, mungkin kosong, idx adalah indeks yang valid dalam list}
+{F.S. : elemen telah disisipkan ke dalam list pada indeks ke-x}
+
+Kamus Lokal
+	count, i : integer
+
+Algoritma {untuk alt-2b}
+	if(length(l)<CAPACITY) then
+		if (lastIdx(l)=CAPACITY-1) then //kita anggap fungsi lastIdx sudah diimplementasi
+			j<-0
+			i transversal [firstIdx(l)...lastIdx(l)] //pergeseran supaya rata kek kiri
+				l.contents[j]=l.contents[i]
+				l.content[i]=MARK
+				j<-j+1
+				l.firstEffIdx<-0
+				l.lastEffIdx<-j
+
+		i transversal[length(l)...idx+1]
+			l.content[i]=l.content[i-1]
+		l.content[idx]=x
+	
+
+function indexOf(l : list, x : integer) → integer
+Kamus Lokal
+	i,j : integer
+
+Algoritma {untuk alt-2b}
+	if(isEmpty) then
+		-> IDX_UNDEF
+	else
+		i<-firstEffIdx(l)
+		j<-lastEffIdx(l)
+		while(i<=j)do
+			if(l.contents[i]=x) then
+				--> i
+			else
+				i<-i+1
+		--> IDX_UNDEF
+
+
+function concat(l1,l2 : list) → list
+Kamus Lokal
+	lakhir : list
+	i,j,k : integer
+
+Algoritma {untuk alt-2b}
+	i←0
+	j transversal [l1.firstEffIdx..l1.lastEffIdx]
+		lakhir.contents[i]<-l1.contents[j]
+		i<-i+1
+	k transversal [l2.firstEffIdx..l2.lastEffIdx]
+		lakhir.contents[i]<-l2.contents[k]
+		i<-i+1
+	→ lakhir

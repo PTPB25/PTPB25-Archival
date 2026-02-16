@@ -1,0 +1,60 @@
+
+constant IDX_UNDEF : integer = -1
+
+type ElType: integer
+type Address: pointer to Node //sebuah elemen yang nunjuk ke node
+
+type Node: < info: ElType,
+next: Address > //node itu bagian terkecil dari linked list
+
+type List: Address //List tipe datanya adalah pointer to node, tapi
+//secara khusus, dia adalah POINTER TO NODE YANG PERTAMAAA (NODE HEAD)
+
+function searchPos(l : list, val : integer) --> integer
+
+Kamus Lokal
+	pt : Address (pointer to node)
+	idx : integer
+Algoritma
+	pt <- l
+	idx<-0
+	while(pt != NULL) do //ketika pertama klai masuk loop ini, yang diakses adalah elemen pertama
+		if(pt.info=val) then
+			--> idx
+		pt<-pt.next
+		idx<-idx+1
+	--> IDX_UNDEF
+
+procedure sortedInsert(input/output l:List, input x:ElType)
+{F.S. : linked list yang udah ditambahin x dengan pola urutan menaik}
+
+Kamus Lokal
+	curr, copy : Address (pointer to node)
+	pt : Address
+	idx : integer
+Algoritma
+	curr <- l
+	prev <- NIL
+	while(curr) and (curr.info<x) do
+		prev<-curr //
+		curr<-curr.next //transversal
+	
+	pt <- newAddress(x)
+	prev.next<-ptemp
+	ptemp.next<-curr
+
+
+	//alokasi pointer
+	//Adddress ptemp = malloc(sizezof(Node))
+	
+
+Address newAddress(input x : ElType)
+Kamus Lokal
+	pt : Address
+Algoritma
+	alokasi(pt)
+	if(pt) then
+		pt.info<-x
+		pt.next<-NIL
+	--> pt
+	

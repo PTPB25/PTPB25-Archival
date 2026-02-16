@@ -1,0 +1,34 @@
+constant CAPACITY : integer = 100
+constant IDX_UNDEF : integer = -1
+
+type ElType : integer
+type List : <contents : array[0...CAPACITY-1] of ElType, Neff : integer>
+
+
+
+/* IMPLEMENTASI alt-1b*/
+/* di mana arraynya itu pakai mark, kontinu, tapi indeks efektif pertamanya gak mulai dari 0*/
+
+
+type ElType : integer
+type List : < contents : array[0...CAPACITY-1] of ElType>
+
+procedure insertAt(input/output l : List, input idx : integer, input val : ElType)
+// indeks di sini indeks efektif
+
+Kamus Lokal
+	i, j : integer
+Algoritma
+	//ini pergeseran bisa sekali aja ke indeks kiri, atau mau langsung ratain ke kiri
+
+	j<-0
+	if(length(l)<CAPACITY) then
+		if(lastIdx(l)=length(l)-1) then
+			i transversal[firstIdx(l)...lastIdx(l)] //firstIdx dan lastIdx diasumsikan adlaah fungsi yang udah dibuat
+				l.content[j]<-l.content[i]
+				l.content[i]<-MARK
+				j<-j+1 //akhirnya bakal dapat list yang udah bergeser
+		i transversal[length(l)...idx+1]
+			l.content[i]<-l.content[i-1]
+		l.content[idx]<-val
+			

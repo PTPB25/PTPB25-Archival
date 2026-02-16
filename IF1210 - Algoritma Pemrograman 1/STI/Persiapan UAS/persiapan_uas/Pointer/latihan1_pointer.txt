@@ -1,0 +1,19 @@
+int f(void){
+    {declaration}
+    int s = 1;
+    int t = 1;
+
+    {referencing process}
+
+    int *ps = &s;
+    int **pps = &ps; {pointer to pointer, ps has the type "pointer of integer"}
+
+    {jadi kalau ngepoint ke pointer, simbol starnya dua kali supaya ekuivalen}
+    
+    int *pt = &t;
+
+    **pps =2 ;
+    pt = ps;
+    *pt = 3;
+    t = s;
+}

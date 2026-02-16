@@ -1,0 +1,17 @@
+Praktikum 2
+
+Pisang matang:
+
+scanf("%*[^\n]");
+
+% marks the beginning of a format specifier
+* is the "assignment suppression" character - it tells scanf to read the input but not assign it to any variable (effectively discarding it)
+[^\n] is a scanset that matches any character EXCEPT (^ means "not") the newline character \n
+So this entire statement reads "scan and discard all characters until you reach a newline"
+
+scanf("%*c");
+
+% again marks the format specifier
+* again means "read but don't assign to a variable"
+c means "character"
+So this reads and discards a single character (in this case, the newline character)
