@@ -1,0 +1,35 @@
+
+--- Land Vehicle: Car ---
+[CREATE] Vehicle V001 (Toyota, 180 km/h) registered
+[CREATE] LandVehicle Toyota with 4 wheels ready
+[CREATE] Car Toyota type Sedan ready
+[DRIVE] Toyota (4 wheels) driving to Jakarta
+[RACE] Toyota Sedan racing at max 180 km/h
+[SPEC] V001 | Toyota | MaxSpeed: 180
+
+--- Water Vehicle: Submarine ---
+[CREATE] Vehicle V002 (Krakatau, 40 km/h) registered
+[CREATE] WaterVehicle Krakatau with 5000 tons displacement ready
+[CREATE] Submarine Krakatau max depth 300m ready
+[SAIL] Krakatau (5000 tons) sailing to Selat Malaka
+[DIVE] Krakatau diving to 200m (max: 300m)
+[SPEC] V002 | Krakatau | MaxSpeed: 40
+
+--- Air Vehicle: Drone ---
+[CREATE] Vehicle V003 (DJI, 120 km/h) registered
+[CREATE] AirVehicle DJI at max altitude 5000m ready
+[CREATE] Drone DJI with 30min battery ready
+[FLY] DJI (max 5000m) flying to Gunung Bromo
+[SCAN] DJI scanning Kawah Ijen for 30 minutes
+[SPEC] V003 | DJI | MaxSpeed: 120
+
+--- Cleanup ---
+[DELETE] Drone DJI destroyed
+[DELETE] AirVehicle DJI destroyed
+[DELETE] Vehicle V003 (DJI) destroyed
+[DELETE] Submarine Krakatau destroyed
+[DELETE] WaterVehicle Krakatau destroyed
+[DELETE] Vehicle V002 (Krakatau) destroyed
+[DELETE] Car Toyota destroyed
+[DELETE] LandVehicle Toyota destroyed
+[DELETE] Vehicle V001 (Toyota) destroyed

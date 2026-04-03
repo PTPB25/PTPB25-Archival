@@ -1,0 +1,7 @@
+Value: 5
+Value: 10
+Value: Hello
+25
+World
+7
+5.1
