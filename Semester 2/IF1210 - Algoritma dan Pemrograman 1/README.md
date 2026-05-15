@@ -15,16 +15,16 @@ Spesifikasi resmi tugas besar:   [Dokumen Spesifikasi IF1210](https://docs.googl
 
 ## Teknik Informatika
 
-- **K01 – K** — [Repository](https://github.com/Shui7/IF1210-Tubes-Alpro-1)
-- **K02 – L** — [Repository](https://github.com/Zekiamani1/Tugas-besar-Algoritma-dan-Pemrograman-1)
-- **K02 – K** — [Repository](https://github.com/Achideon/IF1210-Tubes-Alpro-1)
+- **K01 – K** — **[Repository](https://github.com/Shui7/IF1210-Tubes-Alpro-1)**
+- **K02 – L** — **[Repository](https://github.com/Zekiamani1/Tugas-besar-Algoritma-dan-Pemrograman-1)**
+- **K02 – K** — **[Repository](https://github.com/Achideon/IF1210-Tubes-Alpro-1)**
 
 ---
 
 ## Sistem Teknologi Informasi
 
-- **K03 – K** — [Repository](https://github.com/Awp-confirm/if1210-tubes-2025-k03-k)
-- **K03 – E** — [Repository](https://github.com/Ztackholder/Tugas-Besar-Alpro-1)
+- **K03 – K** — **[Repository](https://github.com/Awp-confirm/if1210-tubes-2025-k03-k)**
+- **K03 – E** — **[Repository](https://github.com/Ztackholder/Tugas-Besar-Alpro-1)**
 
 <!-- BADGES -->
 
