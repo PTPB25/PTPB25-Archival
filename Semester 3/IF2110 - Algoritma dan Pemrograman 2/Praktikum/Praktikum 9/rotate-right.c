@@ -1,4 +1,4 @@
-/* File: rotate-right.c */
+/* File: problem.c */
 /* Implementasi fungsi untuk merotasi linked list ke kanan sebanyak k posisi */
 
 #include "list.h"
@@ -21,11 +21,12 @@
  */
 
 List rotateRight(List l, int k) {
-    if(k == 0) return l;
-
-    int n = length(l);
-    if(k >= n) return rotateRight(l, k % n);
-
-    if(k > 0) return rotateRight(l, k - n);
-    return rotateRight(konsDot(tail(l), head(l)), k + 1);
+    if(isEmpty(l)) return l;
+    int kmod = k;
+    if(k > 0) kmod = k % length(l) - length(l);
+    if(kmod == 0){
+        return l;
+    } else {
+        return rotateRight(konsDot(tail(l), head(l)), kmod + 1);
+    }
 }
