@@ -10,6 +10,8 @@ Mata kuliah Rekayasa Perangkat Lunak membahas prinsip, metode, dan proses pengem
 | Ujian Tengah Semester (UTS) |
 | Ujian Akhir Semester (UAS) |
 
+Referensi mata kuliah: <code>[Ian Sommerville, Software Engineering (10th Ed)](https://dn790001.ca.archive.org/0/items/bme-vik-konyvek/Software%20Engineering%20-%20Ian%20Sommerville.pdf)</code>
+
 ## Tugas Besar
 
 <p align="justify">
