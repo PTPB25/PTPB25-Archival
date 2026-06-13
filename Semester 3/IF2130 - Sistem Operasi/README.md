@@ -29,3 +29,5 @@ Panduan tugas besar:
 ## Referensi Tubes
 
 - **K02 / MyOSKisah** — <code>[Repository](https://github.com/Cikang44/tugas-besar-os-myoskisah)</code>
+- **K03 / HuTaOS** — <code>[Repository](https://github.com/AzriVz/HuTaOS)</code>
+
