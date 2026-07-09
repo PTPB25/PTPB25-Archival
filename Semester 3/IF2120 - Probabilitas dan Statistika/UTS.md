@@ -1,4 +1,4 @@
-# Kuis 1 IF2120 - Probabilitas dan Statistika 2025/2026
+# UTS IF2120 - Probabilitas dan Statistika 2025/2026
 ### *(soal tidak 100% serupa dengan soal asli)*
 
 1. A wildlife monitoring system uses motion-activated cameras that independently detect animal movement with a success probability of `0.8`. If the system observes 12 areas during one night:
