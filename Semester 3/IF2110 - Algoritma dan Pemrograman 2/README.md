@@ -1,7 +1,7 @@
 # IF2110 — Algoritma dan Pemrograman 2
 
 <p align="justify">
-Mata kuliah Algoritma dan Pemrograman 2 mendalami bahasa pemrograman fungsional dan konsep-konsep lanjutan dari bahasa pemrograman prosedural. Konsep lanjutan tersebut mencakup `Mesin Abstrak`, `List Rekursif`, `Pohon Biner`, dan `Graph`. Mata kuliah ini termasuk dalam rumpun Lab Pemrograman (Labpro).
+Mata kuliah Algoritma dan Pemrograman 2 mendalami bahasa pemrograman fungsional dan konsep-konsep lanjutan dari bahasa pemrograman prosedural. Konsep lanjutan tersebut mencakup <code>Mesin Abstrak</code>, <code>List Rekursif</code>, <code>Pohon Biner</code>, dan <code>Graph</code>. Mata kuliah ini termasuk dalam rumpun Lab Pemrograman (Labpro).
 </p>
 
 | **Bobot akademik** |
