@@ -1,0 +1,4 @@
+Berhasil menyimpan A1
+Berhasil menyimpan B1
+Error: Penyimpanan sudah penuh
+Semua data saat ini: [Apple, 27198]

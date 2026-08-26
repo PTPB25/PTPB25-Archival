@@ -1,0 +1,460 @@
+﻿=== SIMULASI OOP CATUR ===
+
+    0  1  2  3  4  5  6  7 (X)
+  +------------------------+
+0 | .  .  .  .  .  .  .  .  |
+1 | .  .  .  .  .  .  .  .  |
+2 | .  .  .  .  .  .  .  .  |
+3 | .  .  .  .  .  .  .  .  |
+4 | .  .  B  .  K  .  .  .  |
+5 | .  .  .  .  .  .  .  .  |
+6 | .  .  .  .  .  .  R  .  |
+7 | .  .  .  .  .  .  .  .  |
+  +------------------------+
+(Y)
+
+Status Bidak:
+[ID: 1] Bishop di kordinat (2,4)
+[ID: 2] Knight di kordinat (4,4)
+[ID: 3] Rook di kordinat (6,6)
+
+[0] Keluar Aplikasi
+Pilih ID Bidak yang ingin dimainkan: [X] Error: ID Bidak tidak ditemukan!
+
+
+    0  1  2  3  4  5  6  7 (X)
+  +------------------------+
+0 | .  .  .  .  .  .  .  .  |
+1 | .  .  .  .  .  .  .  .  |
+2 | .  .  .  .  .  .  .  .  |
+3 | .  .  .  .  .  .  .  .  |
+4 | .  .  B  .  K  .  .  .  |
+5 | .  .  .  .  .  .  .  .  |
+6 | .  .  .  .  .  .  R  .  |
+7 | .  .  .  .  .  .  .  .  |
+  +------------------------+
+(Y)
+
+Status Bidak:
+[ID: 1] Bishop di kordinat (2,4)
+[ID: 2] Knight di kordinat (4,4)
+[ID: 3] Rook di kordinat (6,6)
+
+[0] Keluar Aplikasi
+Pilih ID Bidak yang ingin dimainkan: Pilih Arah Pergerakan:
+2. Atas Kanan
+4. Atas Kiri
+6. Bawah Kanan
+8. Bawah Kiri
+Arah Pergerakan: Sebut berapa langkah: [X] Error: Pilihan arah tidak valid!
+
+    0  1  2  3  4  5  6  7 (X)
+  +------------------------+
+0 | .  .  .  .  .  .  .  .  |
+1 | .  .  .  .  .  .  .  .  |
+2 | .  .  .  .  .  .  .  .  |
+3 | .  .  .  .  .  .  .  .  |
+4 | .  .  B  .  K  .  .  .  |
+5 | .  .  .  .  .  .  .  .  |
+6 | .  .  .  .  .  .  R  .  |
+7 | .  .  .  .  .  .  .  .  |
+  +------------------------+
+(Y)
+
+Status Bidak:
+[ID: 1] Bishop di kordinat (2,4)
+[ID: 2] Knight di kordinat (4,4)
+[ID: 3] Rook di kordinat (6,6)
+
+[0] Keluar Aplikasi
+Pilih ID Bidak yang ingin dimainkan: Pilih Arah Pergerakan:
+2. Atas Kanan
+4. Atas Kiri
+6. Bawah Kanan
+8. Bawah Kiri
+Arah Pergerakan: Sebut berapa langkah: [V] SUKSES: Bidak dipindahkan!
+
+    0  1  2  3  4  5  6  7 (X)
+  +------------------------+
+0 | .  .  .  .  .  .  .  .  |
+1 | .  .  .  .  .  B  .  .  |
+2 | .  .  .  .  .  .  .  .  |
+3 | .  .  .  .  .  .  .  .  |
+4 | .  .  .  .  K  .  .  .  |
+5 | .  .  .  .  .  .  .  .  |
+6 | .  .  .  .  .  .  R  .  |
+7 | .  .  .  .  .  .  .  .  |
+  +------------------------+
+(Y)
+
+Status Bidak:
+[ID: 1] Bishop di kordinat (5,1)
+[ID: 2] Knight di kordinat (4,4)
+[ID: 3] Rook di kordinat (6,6)
+
+[0] Keluar Aplikasi
+Pilih ID Bidak yang ingin dimainkan: Pilih Arah Pergerakan:
+2. Atas Kanan
+4. Atas Kiri
+6. Bawah Kanan
+8. Bawah Kiri
+Arah Pergerakan: Sebut berapa langkah: [V] SUKSES: Bidak dipindahkan!
+
+    0  1  2  3  4  5  6  7 (X)
+  +------------------------+
+0 | .  .  .  .  B  .  .  .  |
+1 | .  .  .  .  .  .  .  .  |
+2 | .  .  .  .  .  .  .  .  |
+3 | .  .  .  .  .  .  .  .  |
+4 | .  .  .  .  K  .  .  .  |
+5 | .  .  .  .  .  .  .  .  |
+6 | .  .  .  .  .  .  R  .  |
+7 | .  .  .  .  .  .  .  .  |
+  +------------------------+
+(Y)
+
+Status Bidak:
+[ID: 1] Bishop di kordinat (4,0)
+[ID: 2] Knight di kordinat (4,4)
+[ID: 3] Rook di kordinat (6,6)
+
+[0] Keluar Aplikasi
+Pilih ID Bidak yang ingin dimainkan: Pilih Arah Pergerakan:
+2. Atas Kanan
+4. Atas Kiri
+6. Bawah Kanan
+8. Bawah Kiri
+Arah Pergerakan: Sebut berapa langkah: [V] SUKSES: Bidak dipindahkan!
+
+    0  1  2  3  4  5  6  7 (X)
+  +------------------------+
+0 | .  .  .  .  .  .  .  .  |
+1 | .  .  .  .  .  .  .  .  |
+2 | .  .  .  .  .  .  B  .  |
+3 | .  .  .  .  .  .  .  .  |
+4 | .  .  .  .  K  .  .  .  |
+5 | .  .  .  .  .  .  .  .  |
+6 | .  .  .  .  .  .  R  .  |
+7 | .  .  .  .  .  .  .  .  |
+  +------------------------+
+(Y)
+
+Status Bidak:
+[ID: 1] Bishop di kordinat (6,2)
+[ID: 2] Knight di kordinat (4,4)
+[ID: 3] Rook di kordinat (6,6)
+
+[0] Keluar Aplikasi
+Pilih ID Bidak yang ingin dimainkan: Pilih Arah Pergerakan:
+2. Atas Kanan
+4. Atas Kiri
+6. Bawah Kanan
+8. Bawah Kiri
+Arah Pergerakan: Sebut berapa langkah: [V] SUKSES: Bidak dipindahkan!
+
+    0  1  2  3  4  5  6  7 (X)
+  +------------------------+
+0 | .  .  .  .  .  .  .  .  |
+1 | .  .  .  .  .  .  .  .  |
+2 | .  .  .  .  .  .  .  .  |
+3 | .  .  .  .  .  .  .  .  |
+4 | .  .  .  .  K  .  .  .  |
+5 | .  .  .  .  .  .  .  .  |
+6 | .  .  .  .  .  .  R  .  |
+7 | .  B  .  .  .  .  .  .  |
+  +------------------------+
+(Y)
+
+Status Bidak:
+[ID: 1] Bishop di kordinat (1,7)
+[ID: 2] Knight di kordinat (4,4)
+[ID: 3] Rook di kordinat (6,6)
+
+[0] Keluar Aplikasi
+Pilih ID Bidak yang ingin dimainkan: Pilih Arah Pergerakan:
+2. Atas Kanan
+4. Atas Kiri
+6. Bawah Kanan
+8. Bawah Kiri
+Arah Pergerakan: Sebut berapa langkah: [X] GAGAL: Gerakan akan membuat bidak keluar dari papan!
+
+    0  1  2  3  4  5  6  7 (X)
+  +------------------------+
+0 | .  .  .  .  .  .  .  .  |
+1 | .  .  .  .  .  .  .  .  |
+2 | .  .  .  .  .  .  .  .  |
+3 | .  .  .  .  .  .  .  .  |
+4 | .  .  .  .  K  .  .  .  |
+5 | .  .  .  .  .  .  .  .  |
+6 | .  .  .  .  .  .  R  .  |
+7 | .  B  .  .  .  .  .  .  |
+  +------------------------+
+(Y)
+
+Status Bidak:
+[ID: 1] Bishop di kordinat (1,7)
+[ID: 2] Knight di kordinat (4,4)
+[ID: 3] Rook di kordinat (6,6)
+
+[0] Keluar Aplikasi
+Pilih ID Bidak yang ingin dimainkan: Pilih Arah Pergerakan:
+2. Atas Kanan
+4. Atas Kiri
+6. Bawah Kanan
+8. Bawah Kiri
+Arah Pergerakan: [V] SUKSES: Bidak dipindahkan!
+
+    0  1  2  3  4  5  6  7 (X)
+  +------------------------+
+0 | .  .  .  .  .  .  .  .  |
+1 | .  .  .  .  .  .  .  .  |
+2 | .  .  .  .  .  K  .  .  |
+3 | .  .  .  .  .  .  .  .  |
+4 | .  .  .  .  .  .  .  .  |
+5 | .  .  .  .  .  .  .  .  |
+6 | .  .  .  .  .  .  R  .  |
+7 | .  B  .  .  .  .  .  .  |
+  +------------------------+
+(Y)
+
+Status Bidak:
+[ID: 1] Bishop di kordinat (1,7)
+[ID: 2] Knight di kordinat (5,2)
+[ID: 3] Rook di kordinat (6,6)
+
+[0] Keluar Aplikasi
+Pilih ID Bidak yang ingin dimainkan: Pilih Arah Pergerakan:
+2. Atas Kanan
+4. Atas Kiri
+6. Bawah Kanan
+8. Bawah Kiri
+Arah Pergerakan: [V] SUKSES: Bidak dipindahkan!
+
+    0  1  2  3  4  5  6  7 (X)
+  +------------------------+
+0 | .  .  .  .  K  .  .  .  |
+1 | .  .  .  .  .  .  .  .  |
+2 | .  .  .  .  .  .  .  .  |
+3 | .  .  .  .  .  .  .  .  |
+4 | .  .  .  .  .  .  .  .  |
+5 | .  .  .  .  .  .  .  .  |
+6 | .  .  .  .  .  .  R  .  |
+7 | .  B  .  .  .  .  .  .  |
+  +------------------------+
+(Y)
+
+Status Bidak:
+[ID: 1] Bishop di kordinat (1,7)
+[ID: 2] Knight di kordinat (4,0)
+[ID: 3] Rook di kordinat (6,6)
+
+[0] Keluar Aplikasi
+Pilih ID Bidak yang ingin dimainkan: Pilih Arah Pergerakan:
+2. Atas Kanan
+4. Atas Kiri
+6. Bawah Kanan
+8. Bawah Kiri
+Arah Pergerakan: [V] SUKSES: Bidak dipindahkan!
+
+    0  1  2  3  4  5  6  7 (X)
+  +------------------------+
+0 | .  .  .  .  .  .  .  .  |
+1 | .  .  .  .  .  .  .  .  |
+2 | .  .  .  .  .  K  .  .  |
+3 | .  .  .  .  .  .  .  .  |
+4 | .  .  .  .  .  .  .  .  |
+5 | .  .  .  .  .  .  .  .  |
+6 | .  .  .  .  .  .  R  .  |
+7 | .  B  .  .  .  .  .  .  |
+  +------------------------+
+(Y)
+
+Status Bidak:
+[ID: 1] Bishop di kordinat (1,7)
+[ID: 2] Knight di kordinat (5,2)
+[ID: 3] Rook di kordinat (6,6)
+
+[0] Keluar Aplikasi
+Pilih ID Bidak yang ingin dimainkan: Pilih Arah Pergerakan:
+2. Atas Kanan
+4. Atas Kiri
+6. Bawah Kanan
+8. Bawah Kiri
+Arah Pergerakan: [V] SUKSES: Bidak dipindahkan!
+
+    0  1  2  3  4  5  6  7 (X)
+  +------------------------+
+0 | .  .  .  .  .  .  .  .  |
+1 | .  .  .  .  .  .  .  .  |
+2 | .  .  .  .  .  .  .  .  |
+3 | .  .  .  .  .  .  .  .  |
+4 | .  .  .  .  K  .  .  .  |
+5 | .  .  .  .  .  .  .  .  |
+6 | .  .  .  .  .  .  R  .  |
+7 | .  B  .  .  .  .  .  .  |
+  +------------------------+
+(Y)
+
+Status Bidak:
+[ID: 1] Bishop di kordinat (1,7)
+[ID: 2] Knight di kordinat (4,4)
+[ID: 3] Rook di kordinat (6,6)
+
+[0] Keluar Aplikasi
+Pilih ID Bidak yang ingin dimainkan: Pilih Arah Pergerakan:
+1. Atas
+3. Kanan
+5. Kiri
+7. Bawah
+Arah Pergerakan: Sebut berapa langkah: [V] SUKSES: Bidak dipindahkan!
+
+    0  1  2  3  4  5  6  7 (X)
+  +------------------------+
+0 | .  .  .  .  .  .  .  .  |
+1 | .  .  .  .  .  .  R  .  |
+2 | .  .  .  .  .  .  .  .  |
+3 | .  .  .  .  .  .  .  .  |
+4 | .  .  .  .  K  .  .  .  |
+5 | .  .  .  .  .  .  .  .  |
+6 | .  .  .  .  .  .  .  .  |
+7 | .  B  .  .  .  .  .  .  |
+  +------------------------+
+(Y)
+
+Status Bidak:
+[ID: 1] Bishop di kordinat (1,7)
+[ID: 2] Knight di kordinat (4,4)
+[ID: 3] Rook di kordinat (6,1)
+
+[0] Keluar Aplikasi
+Pilih ID Bidak yang ingin dimainkan: Pilih Arah Pergerakan:
+1. Atas
+3. Kanan
+5. Kiri
+7. Bawah
+Arah Pergerakan: Sebut berapa langkah: [X] GAGAL: Gerakan akan membuat bidak keluar dari papan!
+
+    0  1  2  3  4  5  6  7 (X)
+  +------------------------+
+0 | .  .  .  .  .  .  .  .  |
+1 | .  .  .  .  .  .  R  .  |
+2 | .  .  .  .  .  .  .  .  |
+3 | .  .  .  .  .  .  .  .  |
+4 | .  .  .  .  K  .  .  .  |
+5 | .  .  .  .  .  .  .  .  |
+6 | .  .  .  .  .  .  .  .  |
+7 | .  B  .  .  .  .  .  .  |
+  +------------------------+
+(Y)
+
+Status Bidak:
+[ID: 1] Bishop di kordinat (1,7)
+[ID: 2] Knight di kordinat (4,4)
+[ID: 3] Rook di kordinat (6,1)
+
+[0] Keluar Aplikasi
+Pilih ID Bidak yang ingin dimainkan: Pilih Arah Pergerakan:
+1. Atas
+3. Kanan
+5. Kiri
+7. Bawah
+Arah Pergerakan: Sebut berapa langkah: [V] SUKSES: Bidak dipindahkan!
+
+    0  1  2  3  4  5  6  7 (X)
+  +------------------------+
+0 | .  .  .  .  .  .  .  .  |
+1 | .  .  .  .  .  .  .  R  |
+2 | .  .  .  .  .  .  .  .  |
+3 | .  .  .  .  .  .  .  .  |
+4 | .  .  .  .  K  .  .  .  |
+5 | .  .  .  .  .  .  .  .  |
+6 | .  .  .  .  .  .  .  .  |
+7 | .  B  .  .  .  .  .  .  |
+  +------------------------+
+(Y)
+
+Status Bidak:
+[ID: 1] Bishop di kordinat (1,7)
+[ID: 2] Knight di kordinat (4,4)
+[ID: 3] Rook di kordinat (7,1)
+
+[0] Keluar Aplikasi
+Pilih ID Bidak yang ingin dimainkan: Pilih Arah Pergerakan:
+1. Atas
+3. Kanan
+5. Kiri
+7. Bawah
+Arah Pergerakan: Sebut berapa langkah: [V] SUKSES: Bidak dipindahkan!
+
+    0  1  2  3  4  5  6  7 (X)
+  +------------------------+
+0 | .  .  .  .  .  .  .  .  |
+1 | .  .  .  R  .  .  .  .  |
+2 | .  .  .  .  .  .  .  .  |
+3 | .  .  .  .  .  .  .  .  |
+4 | .  .  .  .  K  .  .  .  |
+5 | .  .  .  .  .  .  .  .  |
+6 | .  .  .  .  .  .  .  .  |
+7 | .  B  .  .  .  .  .  .  |
+  +------------------------+
+(Y)
+
+Status Bidak:
+[ID: 1] Bishop di kordinat (1,7)
+[ID: 2] Knight di kordinat (4,4)
+[ID: 3] Rook di kordinat (3,1)
+
+[0] Keluar Aplikasi
+Pilih ID Bidak yang ingin dimainkan: Pilih Arah Pergerakan:
+1. Atas
+3. Kanan
+5. Kiri
+7. Bawah
+Arah Pergerakan: Sebut berapa langkah: [V] SUKSES: Bidak dipindahkan!
+
+    0  1  2  3  4  5  6  7 (X)
+  +------------------------+
+0 | .  .  .  .  .  .  .  .  |
+1 | .  .  .  .  .  .  .  .  |
+2 | .  .  .  .  .  .  .  .  |
+3 | .  .  .  .  .  .  .  .  |
+4 | .  .  .  .  K  .  .  .  |
+5 | .  .  .  .  .  .  .  .  |
+6 | .  .  .  R  .  .  .  .  |
+7 | .  B  .  .  .  .  .  .  |
+  +------------------------+
+(Y)
+
+Status Bidak:
+[ID: 1] Bishop di kordinat (1,7)
+[ID: 2] Knight di kordinat (4,4)
+[ID: 3] Rook di kordinat (3,6)
+
+[0] Keluar Aplikasi
+Pilih ID Bidak yang ingin dimainkan: Pilih Arah Pergerakan:
+1. Atas
+3. Kanan
+5. Kiri
+7. Bawah
+Arah Pergerakan: Sebut berapa langkah: [X] GAGAL: Gerakan akan membuat bidak keluar dari papan!
+
+    0  1  2  3  4  5  6  7 (X)
+  +------------------------+
+0 | .  .  .  .  .  .  .  .  |
+1 | .  .  .  .  .  .  .  .  |
+2 | .  .  .  .  .  .  .  .  |
+3 | .  .  .  .  .  .  .  .  |
+4 | .  .  .  .  K  .  .  .  |
+5 | .  .  .  .  .  .  .  .  |
+6 | .  .  .  R  .  .  .  .  |
+7 | .  B  .  .  .  .  .  .  |
+  +------------------------+
+(Y)
+
+Status Bidak:
+[ID: 1] Bishop di kordinat (1,7)
+[ID: 2] Knight di kordinat (4,4)
+[ID: 3] Rook di kordinat (3,6)
+
+[0] Keluar Aplikasi
+Pilih ID Bidak yang ingin dimainkan: Aplikasi dihentikan.

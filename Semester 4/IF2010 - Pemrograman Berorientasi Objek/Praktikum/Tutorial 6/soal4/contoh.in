@@ -1,0 +1,10 @@
+SCHEMA Mahasiswa
+SCHEMA Produk
+INSERT Mahasiswa 13522058 Imanuel 2022
+INSERT Produk 1 laptop 999.5
+INSERT Mahasiswa 1234 BadNIM 2023
+INSERT Produk 2 freeitem 0.0
+DELETE Mahasiswa 13522058 Imanuel 2022
+DELETE Produk 1 laptop 999.5
+DELETE Mahasiswa 13500001 OldStudent 2019
+DELETE Produk 0 freeitem 0.0

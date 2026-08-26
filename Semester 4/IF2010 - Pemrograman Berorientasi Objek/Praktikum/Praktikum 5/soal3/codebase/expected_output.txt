@@ -1,0 +1,17 @@
+=== CEK BAHAN APEL ===
+Apel Fuji dengan tingkat manis 8
+Apel Malang dengan tingkat manis 7
+
+=== CEK BAHAN PISANG ===
+Pisang Ambon dengan tingkat manis 9
+
+=== TOTAL MANIS APEL ===
+15
+
+=== BUAT JUS APEL KE DALAM GELAS APEL ===
+Minuman: Jus Apel Original
+Minuman: Jus Apel Madu
+
+=== BUAT JUS APEL KE DALAM GELAS BUAH ===
+Minuman: Jus Apel Original
+Minuman: Jus Apel Madu

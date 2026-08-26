@@ -1,0 +1,24 @@
+Laci kosong
+Disimpan: 42
+Disimpan: 17
+Disimpan: 88
+Disimpan: 3.5
+Disimpan: 1.5
+Disimpan: durian
+Disimpan: apel
+Disimpan: mangga
+Laci[Integer]: [42, 17, 88]
+Laci[Double]: [3.5, 1.5]
+Laci[String]: [durian, apel, mangga]
+17
+3.5
+mangga
+null
+Total: 147.0
+Total: 5.0
+Rata-rata: 49.0
+Rata-rata: 2.5
+88
+mangga
+Laci[Integer]: [88, 17, 42]
+Laci[String]: [apel, durian, mangga]

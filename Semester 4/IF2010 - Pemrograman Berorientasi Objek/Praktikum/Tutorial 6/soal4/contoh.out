@@ -1,0 +1,18 @@
+Table: mahasiswa
+Columns:
+  - nim [PRIMARY KEY]
+  - nama_mahasiswa
+  - angkatan
+Table: produk
+Columns:
+  - id_produk [PRIMARY KEY]
+  - nama_produk
+  - harga
+INSERT INTO mahasiswa (nim, nama_mahasiswa, angkatan) VALUES ('13522058', 'Imanuel', 2022)
+INSERT INTO produk (id_produk, nama_produk, harga) VALUES (1, 'LAPTOP', 999.5)
+Gagal insert: NIM harus 8 digit
+Gagal insert: Harga harus positif
+DELETE FROM mahasiswa WHERE nim = '13522058'
+DELETE FROM produk WHERE id_produk = 1
+Gagal delete: Mahasiswa lama tidak dapat dihapus
+Gagal delete: ID produk tidak valid untuk dihapus

@@ -1,0 +1,12 @@
+Thread 0:
+Batch sensor_a: sum = 6.0
+Batch sensor_b: sum = 100.0
+Batch sensor_c: sum = 4.0
+
+Thread 1:
+Batch sensor_d: sum = 18.0
+Batch sensor_e: sum = 300.0
+
+Total items processed: 14
+Total sum: 428.0
+Max: 200.0

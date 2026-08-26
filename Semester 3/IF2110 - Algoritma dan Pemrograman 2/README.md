@@ -23,3 +23,6 @@ Spesifikasi resmi tugas besar:   **<code>[Dokumen Spesifikasi Tugas Besar 1](htt
 
 ### Referensi Tugas Besar
 
+- **K01 - A** — <code>[Repository](https://github.com/Achideon/IF2110-Tubes-Alpro-2)</code>
+- **K01 - K** — <code>[Repository](https://github.com/Shui7/if2110-tubes-2025-k01-k-1)</code>
+- **K02 - I** — <code>[Repository](https://github.com/Zekiamani1/Tugas-besar-Algoritma-dan-Pemrograman-2)</code>

@@ -1,0 +1,33 @@
+name = Lampu Kamar
+brightness = 80
+active = false
+name = Kipas Ruang Tamu
+speed = 2
+active = false
+increaseBrightness
+resetBrightness
+turnOff
+turnOn
+increaseSpeed
+resetSpeed
+turnOff
+turnOn
+Lampu Kamar dinyalakan
+name = Lampu Kamar
+brightness = 80
+active = true
+Kecepatan Kipas Ruang Tamu menjadi 3
+name = Kipas Ruang Tamu
+speed = 3
+active = false
+Brightness Lampu Kamar direset
+name = Lampu Kamar
+brightness = 0
+active = true
+Kecepatan Kipas Ruang Tamu direset
+name = Kipas Ruang Tamu
+speed = 0
+active = false
+COMMAND_NOT_FOUND
+COMMAND_NOT_FOUND
+UNKNOWN_DEVICE

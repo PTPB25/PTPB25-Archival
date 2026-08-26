@@ -1,0 +1,14 @@
+OK
+OK
+INVALID_STATE balance tidak cukup
+OK
+Item berhasil terbeli
+Stock: 1, Balance: 1000, Price: 4000
+OK
+Item berhasil terbeli
+Stock: 0, Balance: 1000, Price: 4000
+INVALID_STATE stock kosong
+REFUND 1000
+Stock: 0, Balance: 0, Price: 4000
+OK
+INVALID_STATE stock kosong

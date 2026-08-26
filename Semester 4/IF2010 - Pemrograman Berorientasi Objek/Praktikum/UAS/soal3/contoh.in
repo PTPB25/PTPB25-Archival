@@ -1,0 +1,6 @@
+5 2
+INT sensor_a 3 1 2 3
+INT sensor_b 4 10 20 30 40
+DOUBLE sensor_c 2 1.5 2.5
+DOUBLE sensor_d 3 5.0 6.0 7.0
+INT sensor_e 2 100 200
